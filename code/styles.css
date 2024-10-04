@@ -15,7 +15,7 @@ body {
 
 /* Header Section with Background Image */
 header#top-header {
-  height: 100vh;
+  min-height: 100vh;
   background-image: url(./assets/marcodi.jpg);
   background-size: cover;
   background-position: center;
@@ -252,7 +252,26 @@ h2 {
 
 }
 
-@media (max-width: 768px) {
+@media screen and (orientation: landscape) {
+  header#top-header {
+    flex-direction: row;
+    overflow-y: auto;
+  }
+
+  .large-title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+
+  .button-class {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+  }
+}
+
+
+@media (max-width: 667px) {
+
   #top-nav ul {
     /* Stack the buttons vertically */
     flex-direction: column;
