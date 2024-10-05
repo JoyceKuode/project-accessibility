@@ -1,10 +1,10 @@
+//DOM Selectors
+
 const navButtons = document.querySelectorAll('#top-nav button')
-
 const fadeInSections = document.querySelectorAll('.fade-in-section')
-
 const topButton = document.querySelector('.back-to-top')
-
 const youtubeVideo = document.getElementById('youtube-video')
+
 
 navButtons.forEach(button => {
   button.addEventListener('click', (event) => {
@@ -44,17 +44,13 @@ fadeInSections.forEach(section => {
 })
 
 
-
-
 window.addEventListener('scroll', () => {
   if (document.documentElement.scrollTop > 300) {
     topButton.style.display = 'block'
     topButton.style.opacity = '1'
   } else {
     topButton.style.opacity = '0'
-    setTimeout(() => {
-      topButton.style.display = 'none'
-    }, 300)
+    topButton.style.display = 'none'
   }
 })
 
