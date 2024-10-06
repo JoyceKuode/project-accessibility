@@ -4,14 +4,16 @@ const fadeInSections = document.querySelectorAll('.fade-in-section')
 const topButton = document.getElementById('scroll-button')
 const footer = document.getElementById('footer')
 
+// Check for prefers-reduced-motion
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
 // Event listeners for navigation buttons
 navButtons.forEach(button => {
   button.addEventListener('click', (event) => {
     const sectionId = event.target.getAttribute('data-section')
     const section = document.getElementById(sectionId)
     section.scrollIntoView({
-      behavior:
-        'smooth'
+      behavior: prefersReducedMotion ? 'auto' : 'smooth'
     })
   })
 })
@@ -49,5 +51,5 @@ window.addEventListener('scroll', () => {
 
 // Event listener for back-to-top button
 document.querySelector('.back-to-top').addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' })
+  window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' })
 })
