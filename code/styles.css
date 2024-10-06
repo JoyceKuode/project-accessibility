@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital@0;1&display=swap');
 
-/* Global Reset */
+/* ========================================= */
+/* Global Styles */
+/* ========================================= */
 * {
   margin: 0;
   padding: 0;
@@ -10,8 +12,13 @@
 body {
   font-family: "Inclusive Sans", sans-serif;
   background-color: #f5f5f5;
+  color: white;
   scroll-behavior: smooth;
 }
+
+/* ========================================= */
+/* Header Section */
+/* ========================================= */
 
 /* Header Section with Background Image */
 header#top-header {
@@ -58,6 +65,10 @@ header#top-header {
   font-weight: bold;
 }
 
+/* ========================================= */
+/* Navigation Styles */
+/* ========================================= */
+
 /* Styling for navigation buttons */
 #top-nav ul {
   list-style: none;
@@ -89,7 +100,10 @@ header#top-header {
   box-shadow: 0 0 0 5px rgba(21, 156, 228, 0.6);
 }
 
-/* Basic styling for sections */
+/* ========================================= */
+/* Section Styles */
+/* ========================================= */
+
 section {
   padding: 40px 20px;
   min-height: 100vh;
@@ -100,7 +114,7 @@ section {
   text-align: center;
 }
 
-/* Fade-in animation for the rest of the page */
+/* Fade-in effect */
 .fade-in-section {
   opacity: 0;
   transform: translateY(50px);
@@ -113,6 +127,10 @@ section {
   transform: none;
   visibility: visible;
 }
+
+/* ========================================= */
+/* Polaroid Styles */
+/* ========================================= */
 
 /* Polaroid styling for images */
 .polaroid {
@@ -140,6 +158,9 @@ figcaption {
   margin-top: 10px;
 }
 
+/* ========================================= */
+/* Video Image */
+/* ========================================= */
 
 .video-image {
   margin: 10px;
@@ -164,27 +185,30 @@ figcaption {
 }
 
 /* ========================================= */
-/* Styles for Different Sections of the Page */
+/* Styles for Different Sections */
 /* ========================================= */
+
+.about {
+  color: black;
+}
 
 /* Section 1 Background: Burgundy */
 .section-1 {
   background-color: #800125;
-  color: white;
 }
 
 .section-1 .polaroid {
-  transform: rotate(-5deg);
+  transform: rotate(-2deg);
 }
 
 /* Section 2 Background: Black */
 .section-2 {
   background-color: #000;
-  color: white;
 }
 
-.section-2 .polaroid {
-  transform: rotate(3deg);
+.section-2 .polaroid,
+.section-3 .polaroid {
+  transform: rotate(2deg);
 }
 
 /* Section 3 Background: Gold */
@@ -196,14 +220,16 @@ figcaption {
 /* Section 4 Background: Royal Blue */
 .section-4 {
   background-color: #00008b;
-  color: #ffffff;
 }
 
 /* Section 5 Background: Gray */
 .section-5 {
-  background-color: #808080;
-  color: white;
+  background-color: #818181;
 }
+
+/* ========================================= */
+/* Contact Image Styles */
+/* ========================================= */
 
 .contact-img {
   max-width: 500px;
@@ -215,7 +241,10 @@ figcaption {
   height: auto;
 }
 
-/* Text styling */
+/* ========================================= */
+/* Text Styling */
+/* ========================================= */
+
 h1 {
   font-size: 2.5rem;
   margin: 0 auto 20px;
@@ -240,8 +269,10 @@ p {
   /* Bottom margin for spacing */
 }
 
+/* ========================================= */
+/* Scroll Back to Top Button */
+/* ========================================= */
 
-/* Scroll back to top button */
 .back-to-top {
   position: fixed;
   width: 70px;
@@ -262,7 +293,10 @@ p {
   outline: 2px solid #FFD700;
 }
 
-/* Link styles */
+/* ========================================= */
+/* Link Styles */
+/* ========================================= */
+
 .link-container {
   display: flex;
   flex-direction: column;
@@ -285,7 +319,10 @@ p {
   color: black;
 }
 
-/* Contact form styling */
+/* ========================================= */
+/* Contact Form Styling */
+/* ========================================= */
+
 #contact-form {
   width: 80%;
   margin: 0 auto;
@@ -336,7 +373,10 @@ p {
   outline: 2px solid #007BFF;
 }
 
-/* Footer styling */
+/* ========================================= */
+/* Footer Styling */
+/* ========================================= */
+
 footer {
   background-color: #000;
   color: #d3d3d3;
@@ -349,7 +389,11 @@ footer p {
   margin: 10px;
 }
 
-/* Slightly different layout for larger screens */
+/* ========================================= */
+/* Responsive Design and Media Queries */
+/* ========================================= */
+
+/* Different layout for larger screens */
 @media (min-width: 1025px) {
   .content-wrapper {
     display: flex;
@@ -396,7 +440,7 @@ footer p {
 
 }
 
-/* Smallest devices */
+/* Smaller devices */
 @media (max-width: 667px) {
 
   #top-nav ul {

@@ -1,10 +1,10 @@
 //DOM Selectors
 const navButtons = document.querySelectorAll('#top-nav button')
 const fadeInSections = document.querySelectorAll('.fade-in-section')
-const topButton = document.querySelector('.back-to-top')
+const topButton = document.getElementById('scroll-button')
 const footer = document.getElementById('footer')
 
-// Click event listeners to navigation buttons
+// Event listeners for navigation buttons
 navButtons.forEach(button => {
   button.addEventListener('click', (event) => {
     const sectionId = event.target.getAttribute('data-section')
