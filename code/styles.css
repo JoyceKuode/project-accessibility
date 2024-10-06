@@ -39,7 +39,6 @@ header#top-header {
   align-items: center;
 }
 
-
 /* Large Title */
 .large-title {
   font-size: 5rem;
@@ -87,9 +86,10 @@ header#top-header {
 
 #top-nav button:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(21, 156, 228, 0.4);
+  box-shadow: 0 0 0 5px rgba(21, 156, 228, 0.6);
 }
 
+/* Basic styling for sections */
 section {
   padding: 40px 20px;
   min-height: 100vh;
@@ -124,6 +124,7 @@ section {
   border: 2px solid #333;
   transition: transform 0.3s ease-in-out;
   transform: rotate(-2deg);
+  max-width: 750px;
 }
 
 .polaroid img {
@@ -133,26 +134,38 @@ section {
 }
 
 figcaption {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-style: italic;
   color: #555;
   margin-top: 10px;
 }
 
-/* Video Styling */
-.video-container {
-  position: relative;
-  width: 80%;
-  padding-top: 56.25%;
+
+.video-image {
+  margin: 10px;
 }
 
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
+.video-image img {
   width: 100%;
-  height: 100%;
+  max-width: 600px;
+  height: auto;
+  border: 2px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.video-image:hover {
+  transform: scale(1.005);
+}
+
+.video-image:focus {
+  outline: 3px solid red;
+}
+
+/* ========================================= */
+/* Styles for Different Sections of the Page */
+/* ========================================= */
 
 /* Section 1 Background: Burgundy */
 .section-1 {
@@ -192,10 +205,29 @@ figcaption {
   color: white;
 }
 
-/* Text */
+.contact-img {
+  max-width: 500px;
+  height: auto;
+}
+
+#contact .polaroid img {
+  max-width: 500px;
+  height: auto;
+}
+
+/* Text styling */
 h1 {
   font-size: 2.5rem;
-  margin: 0 auto 40px;
+  margin: 0 auto 20px;
+}
+
+h2 {
+  font-size: 2.2rem;
+  line-height: 1.4;
+}
+
+h3 {
+  font-size: 2rem;
 }
 
 p {
@@ -208,13 +240,8 @@ p {
   /* Bottom margin for spacing */
 }
 
-h2 {
-  font-size: 2.2rem;
-  line-height: 1.4;
-}
 
-
-/* Back to top button */
+/* Scroll back to top button */
 .back-to-top {
   position: fixed;
   width: 70px;
@@ -260,9 +287,9 @@ h2 {
 
 /* Contact form styling */
 #contact-form {
-  max-width: 800px;
+  width: 80%;
   margin: 0 auto;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 #contact-form label {
@@ -278,7 +305,16 @@ h2 {
   margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  text-align: center;
   box-sizing: border-box;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus,
+.styled-link:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.75);
+  outline: 2px solid #007BFF;
 }
 
 #contact-form button {
@@ -294,7 +330,13 @@ h2 {
   background-color: #656768;
 }
 
-/* Footer Styling */
+#contact-form button:focus {
+  background-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.75);
+  outline: 2px solid #007BFF;
+}
+
+/* Footer styling */
 footer {
   background-color: #000;
   color: #d3d3d3;
@@ -307,8 +349,7 @@ footer p {
   margin: 10px;
 }
 
-
-/* Different layout for larger screens */
+/* Slightly different layout for larger screens */
 @media (min-width: 1025px) {
   .content-wrapper {
     display: flex;
@@ -337,6 +378,7 @@ footer p {
 
 /* Keeps nav buttons on screen in mobile landscape mode */
 @media screen and (orientation: landscape) {
+
   header#top-header {
     flex-direction: row;
     overflow-y: auto;
@@ -357,14 +399,11 @@ footer p {
 /* Smallest devices */
 @media (max-width: 667px) {
 
-
-  /* Stack buttons vertically */
   #top-nav ul {
     flex-direction: column;
     gap: 10px;
   }
 
-  /* Make buttons larger for mobile */
   #top-nav button {
     width: 200px;
   }

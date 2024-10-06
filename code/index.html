@@ -12,16 +12,17 @@
 <body>
 
   <!-- Header Section with Navigation and Background Image -->
-  <header id="top-header">
+  <header id="top-header" role="banner">
     <div class="overlay">
       <h1 class="large-title">A Harpejji Story:</h1>
       <h2 class="tagline">The Discovery that Transformed Stevie Wonder's Music</h2>
-      <nav id="top-nav">
+      <nav id="top-nav" role="navigation" aria-label="Main Navigation">
         <ul>
-          <li><button data-section="about">About the Author</button></li>
-          <li><button data-section="intro">The Story</button></li>
-          <li><button data-section="links">Join the Journey</button></li>
-          <li><button data-section="contact">Connect</button></li>
+          <li><button data-section="about" aria-label="About the Author Section">About the Author</button></li>
+          <li><button data-section="intro" aria-label="The Story Section">The Story</button></li>
+          <li><button data-section="links" aria-label="Links Section for More Information">Join the Journey</button>
+          </li>
+          <li><button data-section="contact" aria-label="Contact Section">Connect</button></li>
         </ul>
       </nav>
     </div>
@@ -29,14 +30,14 @@
 
 
   <!-- Main Content Area -->
-  <main>
+  <main role="main">
 
     <!-- About the Author -->
     <section id="about">
-      <h1>Hi!</h1>
+      <h1>Hi! 👋</h1>
       <h2>I'm Joyce Kuo.</h2>
       <figure class="polaroid">
-        <img src="./assets/stevie-namm-2013.jpeg" alt="A photo with musician Stevie Wonder">
+        <img src="./assets/stevie-namm-2013.jpeg" alt="Joyce Kuo standing with musician Stevie Wonder">
         <figcaption>Standing with the legendary Stevie Wonder</figcaption>
       </figure>
       <p>I'm a guitarist, web developer, and a passionate advocate for spreading awareness about the harpejji, an
@@ -54,7 +55,8 @@
         <h1>A New Instrument with Untapped Potential</h1>
         <div class="content-wrapper">
           <figure class="polaroid">
-            <img src="./assets/tim-meeks-and-me.jpg" alt="A photo with Tim Meeks">
+            <img src="./assets/tim-meeks-and-me.jpg"
+              alt="Tim Meeks, inventor of the harpejji, standing with the author after their first experience with the instrumen">
             <figcaption>Tim Meeks, the inventor of the harpejji, and me after my first experience with this amazing
               instrument</figcaption>
           </figure>
@@ -75,7 +77,7 @@
 
       <!-- Section 2: Stevie Wonder Encounter -->
       <section class="fade-in-section section-2">
-        <h1>An Unexpected Encounter with Stevie Wonder</h1>
+        <h2>An Unexpected Encounter with Stevie Wonder</h2>
         <div class="content-wrapper">
           <figure class="polaroid">
             <img src="./assets/stevie-encounter.jpg" alt="The author meeting Stevie Wonder for the first time">
@@ -84,11 +86,13 @@
           <div class="text-content">
             <p>Later that day, I found myself chatting with someone connected to Stevie Wonder's inner circle. Before
               long,
-              I was within earshot of the legend himself, surrounded by his security detail, fans, and paparazzi. As he
+              I was within earshot of the legend himself, surrounded by his security detail, fans, and paparazzi. As
+              he
               played a hammer dulcimer, I heard him express a desire to
               feel more connected to the strings. In that moment, I felt compelled to ask if he
               had
-              ever played the harpejji. Stevie hadn't heard of it, but he was intrigued and insisted I take him to this
+              ever played the harpejji. Stevie hadn't heard of it, but he was intrigued and insisted I take him to
+              this
               new
               instrument so he could try it out
               for himself.</p>
@@ -98,7 +102,7 @@
 
       <!-- Section 3: Stevie's Connection to the Harpejji -->
       <section class="fade-in-section section-3">
-        <h1>Stevie's Connection to the Harpejji</h1>
+        <h2>Stevie's Connection to the Harpejji</h2>
 
         <p>Watching Stevie Wonder play the harpejji for the first time was a surreal experience. As soon as his
           fingers
@@ -108,26 +112,26 @@
         <p>Not long after, Stevie had a custom harpejji crafted for him, and the instrument became a major part of
           his songwriting, recording, and performances. He even dazzled the audience at the Grammy Awards with a
           mesmerizing harpejji performance, solidifying the instrument's place in his musical legacy.</p>
-        <h2>Stevie Wonder Meets the Harpejji</h2>
-        <div class="video-container">
-          <iframe id="youtube-video"
-            src="https://www.youtube.com/embed/jwzeLg1wf3c?si=WEt-y9VehOoiJUe0&disablekb=1&cc_lang_pref=en&hl=en"
-            title="Stevie Wonder Meets the Harpejji" aria-label="YouTube video: Stevie Wonder Meets the Harpejji"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-          </iframe>
-        </div>
+        <h3>Stevie Wonder Meets the Harpejji</h3>
+        <a href="https://www.youtube.com/embed/jwzeLg1wf3c?si=WEt-y9VehOoiJUe0&disablekb=1&cc_lang_pref=en&hl=en"
+          tabindex="0" target="_blank" class="video-image"
+          aria-label="Watch the video of Stevie Wonder's first encounter with the harpejji on YouTube">
+          <img src="./assets/youtube-image.jpg" id="video-image"
+            alt="Video image of Stevie Wonder asking 'So, how long will it take to build one of these?'">
+        </a>
         <p>Watch the moment Stevie Wonder experiments with the harpejji for the very first time!</p>
 
       </section>
 
       <!-- Section 4: Impact -->
       <section class="fade-in-section section-4">
-        <h1>The Power of Spreading Good Information</h1>
+        <h2>The Power of Spreading Good Information</h2>
         <div class="content-wrapper">
           <figure class="polaroid">
-            <img src="./assets/stevie-ny-hotel.jpg" alt="A photo with Stevie Wonder">
-            <figcaption>Stevie and I in his hotel room after he played the harpejji for me and his assistant.
+            <img src="./assets/stevie-ny-hotel.jpg"
+              alt="Joyce Kuo with Stevie Wonder in his hotel room, standing next to his harpejji after playing it for Joyce and his assistant">
+            <figcaption>Hanging out with Stevie at his hotel room in New York, just after he played the harpejji for his
+              assistant and me.
             </figcaption>
           </figure>
           <div class="text-content">
@@ -136,9 +140,10 @@
               takes is connecting the right person with the right tool to create something extraordinary. Watching an
               artist
               like Stevie incorporate the harpejji into his work
-              showed me how transformative a single idea or introduction can be.
+              showed me how transformative a single moment can be.
             </p>
-            <p>Showcasing its potential also inspired a wave of other artists to explore the harpejji's unique sound.
+            <p>Stevie showcasing its potential also inspired a wave of other artists to explore the harpejji's unique
+              sound.
               Musicians like Cory Henry, Harry Connick Jr, Jordan Rudess of Dream Theater, and film composor A.R.
               Rahman, to name a few, have each brought their own distinct style to the isntrument. From jazz and
               classical to progressive rock and cinematic scores, the harpejji has proven to be incredibly versatile,
@@ -149,10 +154,10 @@
 
       <!-- Section 5: Bringing the Harpejji to More People -->
       <section class="fade-in-section section-1">
-        <h1>An Instrument Worthy of More Attention</h1>
+        <h2>An Instrument Worthy of More Attention</h2>
         <div class="content-wrapper">
           <figure class="polaroid">
-            <img src="./assets/stevies-harpejji.jpg" alt="Stevie Wonder's harpejji">
+            <img src="./assets/stevies-harpejji.jpg" alt="Stevie Wonder's custom-built harpejji">
             <figcaption>Stevie's custom-built harpejji features a braille marker for every C note, an "S" for Stevie,
               and
               his name in braille.</figcaption>
@@ -172,11 +177,11 @@
 
       <!-- Section 6: Conclusion -->
       <section class="fade-in-section section-2">
-        <h1>Making a Tiny Ripple in the Ocean of Music</h1>
+        <h2>Making a Tiny Ripple in the Ocean of Music</h2>
         <div class="content-wrapper">
           <figure class="polaroid">
-            <img src="./assets/stevie-and-me.jpg" alt="Stevie Wonder with the author">
-            <figcaption>Being around Stevie Wonder always makes me smile</figcaption>
+            <img src="./assets/stevie-and-me.jpg" alt="Stevie Wonder and Joyce Kuo smiling together">
+            <figcaption>Stevie Wonder and my smiling face</figcaption>
           </figure>
           <div class="text-content">
             <p>Looking back on that day at NAMM and everything that followed, I'm proud to have played a small role in
@@ -188,24 +193,28 @@
         </div>
       </section>
 
-
-      <button class="back-to-top" tabindex="0" aria-label="Scroll back to top">↑</button>
+      <button id="scrollBtn" class="back-to-top" tabindex="0" aria-label="Scroll back to top">↑</button>
     </article>
 
     <!-- Learn More (Links) -->
-    <section id="links" class="fade-in-section section-links">
-      <h1>Join the Journey</h1>
+    <section id="links" class="fade-in-section section-5">
+      <h2>Join the Journey</h2>
       <p>If you're curious about the harpejji, I invite you to learn more. Whether you're a musician looking for a new
         way to express yourself, or just someone fascinated by innovative instruments, the harpejji is worth your
         attention.
       </p>
       <div class="link-container">
-        <a href="https://marcodi.com" class="styled-link">Marcodi Musical Products Website</a>
-        <a href="https://www.steviewonder.net" class="styled-link">Stevie Wonder Official Site</a></li>
+        <a href="https://marcodi.com" class="styled-link" aria-label="Visit Marcodi Musical Products Website">Marcodi
+          Musical Products Website</a>
+        <p>To learn more about the harpejji</p>
+        <a href="https://www.steviewonder.net" class="styled-link" aria-label="Visit Stevie Wonder Official Site">Stevie
+          Wonder Official Site</a>
+        <p>Find out where Stevie performs next so you can see it in action</p>
       </div>
       <figure class="polaroid">
-        <img src="./assets/global-citizen-festival.jpg" alt="Stevie's stage instruments">
-        <figcaption>A photo I took of Stevie's stage instruments after he performed at the Global Citizen Festival
+        <img src="./assets/global-citizen-festival.jpg" alt="Stevie Wonder's stage instruments">
+        <figcaption>A close-up of Stevie Wonder's instruments, captured while standing onstage after his incredible
+          performance at the Global Citizen Festival
         </figcaption>
       </figure>
     </section>
@@ -213,24 +222,37 @@
     <!-- Contact Form  -->
 
     <section id="contact" class="fade-in-section section-3">
-      <h1>Let's Connect</h1>
+      <h2>Let's Connect</h2>
+      <figure class="polaroid">
+        <img src="./assets/me-stevie-jafar.jpg" alt="Backstage with Stevie Wonder and a fan" class="contact-img">
+        <figcaption>
+          A backstage moment with Stevie Wonder after introducing him to my friend Jafar, a true superfan who
+          even has a tattoo of Stevie's face on his arm!
+        </figcaption>
+      </figure>
       <p>After linking Stevie with Marcodi and the creator of the harpejji, I have coordinated several other
         introductions. I'm always happy to connect with anyone eager to experience this amazing instrument.</p>
-      <form id="contact-form" action="submit-form.php" method="POST">
+      <form id="contact-form" action="https://httpbin.org/anything" method="POST">
+        <h3>Get in Touch</h3>
         <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name" autocomplete="name">
+        <input type="text" id="name" name="name" autocomplete="name" aria-required="true">
         <label for="email">Your Email:</label>
-        <input type="email" id="email" name="email" autocomplete="email" required>
+        <input type="email" id="email" name="email" autocomplete="email" required aria-required="true">
         <label for="message">Message:</label>
-        <textarea id="message" name="message" autocomplete="message" rows="5"></textarea>
+        <textarea id="message" name="message" autocomplete="message" rows="5" required aria-required="true"></textarea>
         <button type="submit">Send</button>
       </form>
+      <figure class="polaroid">
+        <img src="./assets/me-and-stevie.jpg" alt="Joyce Kuo smiling with Stevie Wonder" class="contact-img">
+        <figcaption>Every encounter with Stevie is a reminder of the joy music brings
+        </figcaption>
+      </figure>
     </section>
-
 
   </main>
 
-  <footer>
+  <!-- Footer -->
+  <footer id="footer">
     <p>Created by: Joyce Kuo, 2024</p>
     <p>Designed with accessibility and inclusivity in mind. 😎</p>
   </footer>
