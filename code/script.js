@@ -50,6 +50,6 @@ window.addEventListener('scroll', () => {
 })
 
 // Event listener for back-to-top button
-document.querySelector('.back-to-top').addEventListener('click', () => {
+topButton.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' })
 })
